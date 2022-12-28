@@ -1,8 +1,18 @@
-<p style="font-family: 'Sans-Serif Workhorse', sans-serif; font-size: larger;"><span id="date"></span></p>
-
-<script>
-  const today = new Date();
-  const dateElement = document.getElementById("date");
-  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-  dateElement.textContent = today.toLocaleDateString('en-US', options);
-</script>
+<html>
+  <head>
+    <style>
+      body {
+        background-color: #191919;
+        color: #d4d4d4;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Today is <span id="date"></span></p>
+    <script>
+      const today = new Date();
+      const dateElement = document.getElementById("date");
+      dateElement.textContent = today.toDateString();
+    </script>
+  </body>
+</html>
