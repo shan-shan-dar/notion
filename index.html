@@ -1,8 +1,7 @@
-<div>
-  <p style="font-family:Sans-Serif; font-size:30px">
-    <script>
-    date = new Date().toLocaleDateString();
-    document.write(date);
-    </script>
-  </p>
-</div>
+<p style="font-family: 'Sans-Serif Workhorse', sans-serif; font-size: larger;">Today is <span id="date"></span></p>
+
+<script>
+  const today = new Date();
+  const dateElement = document.getElementById("date");
+  dateElement.textContent = today.toDateString();
+</script>
